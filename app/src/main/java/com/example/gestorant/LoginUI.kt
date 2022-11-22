@@ -6,11 +6,15 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
+import retrofit2.Call
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.net.URL
 
 class LoginUI : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        var pica:Picasso
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_ui)
 //definir variables para las entradas y botones
@@ -18,12 +22,15 @@ class LoginUI : AppCompatActivity() {
         val txtpasword = findViewById<EditText>(R.id.txIDPassword)
         val btnPresioname = findViewById<Button>(R.id.Backbutton)
         val imagen = findViewById<ImageView>(R.id.imageView222)
+
         //api picasso
         Picasso.get()
-            .load(Randomimage())
-            .resize(750, 400)
-            .centerCrop()
+           .load(Randomimage())
+          .resize(750, 400)
+          .centerCrop()
             .into(imagen)
+
+
 
         //acciones del boton de ingreso
         btnPresioname.setOnClickListener {
@@ -68,19 +75,18 @@ class LoginUI : AppCompatActivity() {
 
     }
 
+
     fun Randomimage():String {
         var a = (1..5)
-
         when (a.random()) {
-            1 -> return ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6OaXEWDq0MX8kJxp9C4l1gXqnG8OQzorMww&usqp=CAU")
-            2 -> return ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWc3ERFJV96AiLcDSS0R6r_Dj33xlX6kuDw7S4tMd8D8vrhivMqfhuEb4kUB4tl_eqR14&usqp=CAU")
-            3 -> return ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHWhQJfMDTDSyMzWk2dj1r0srSiObZuiiPpQ&usqp=CAU")
-            4 -> return ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY-0NH9kk7svIgbT6_AeAA5PSGUw79-kn0XQ&usqp=CAU")
-            5 -> return ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFTWMso-ML0ftoEQyFE-t9kCFVAfcIWUdoA&usqp=CAU")
+            1 -> return ("https://www.thecocktaildb.com/images/media/drink/yqvvqs1475667388.jpg")
+            2 -> return ("https://www.thecocktaildb.com/images/media/drink/qyyvtu1468878544.jpg")
+            3 -> return ("https://www.thecocktaildb.com/images/media/drink/i9suxb1582474926.jpg")
+            4 -> return ("https://www.thecocktaildb.com/images/media/drink/xvwusr1472669302.jpg")
+            5 -> return ("https://www.thecocktaildb.com/images/media/drink/wysqut1461867176.jpg")
 
-        }
+       }
         return ""
-
 
     }
 }
