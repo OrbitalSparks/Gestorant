@@ -26,7 +26,7 @@ class AgrepersActivity : AppCompatActivity() {
         var spinnerlista= ArrayAdapter(this,android.R.layout.simple_spinner_item,myArray)
         spinnercargo.adapter=spinnerlista
         botonagregarpersona.setOnClickListener {
-            var personanew=Empleados(valornombre.text.toString(),valorapellido.text.toString(),valorDnI.text.toString().toInt(),valortelefono.text.toString().toInt(),valorsalario.text.toString().toDouble(),Direccion(valorcalle.text.toString(),valorcallenumero.text.toString().toInt())
+            var personanew=Empleados(valornombre.text.toString(),valorapellido.text.toString(),valorDnI.text.toString().toInt(),valortelefono.text.toString().toInt(),valorsalario.text.toString().toDouble(),Direccion(valorcalle.text.toString(),valorcallenumero.text.toString().toInt(),)
             ,spinnercargo.selectedItem.toString())
 
          //   Dataalmacen.dataPersonas.remove(produc)

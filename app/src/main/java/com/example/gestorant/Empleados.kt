@@ -2,13 +2,13 @@ package com.example.gestorant
 
 
  class Empleados(
-    var nombre: String,
-    var apellido: String,
+     var nombre: String,
+     var apellido: String,
     var dni: Int,
     var telefono: Int,
     var salario: Double,
     var direccion: Direccion,
-    var carrgo: String,
+    var carrgo: String
     ):Persona() {
 
 

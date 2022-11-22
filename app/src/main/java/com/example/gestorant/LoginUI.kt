@@ -18,19 +18,18 @@ class LoginUI : AppCompatActivity() {
         val txtpasword = findViewById<EditText>(R.id.txIDPassword)
         val btnPresioname = findViewById<Button>(R.id.Backbutton)
         val imagen = findViewById<ImageView>(R.id.imageView222)
+        //api picasso
         Picasso.get()
             .load(Randomimage())
             .resize(750, 400)
             .centerCrop()
             .into(imagen)
 
-
         //acciones del boton de ingreso
         btnPresioname.setOnClickListener {
             val txtusuariostring = txtusuario.text.toString().trim()
             val txtpasswordstring = txtpasword.text.toString().trim()
 
-            //Toast.makeText(this,txtusuario.text, Toast.LENGTH_SHORT).show()
             if (txtusuariostring.isEmpty()){
                 Toast.makeText(this,"Usuario vacio", Toast.LENGTH_SHORT).show()
             }
@@ -46,7 +45,7 @@ class LoginUI : AppCompatActivity() {
     }
 
     //crecion del usuario a entrar
-    var usernames = Usuarios("admin","12345")
+    var usernames = Usuarios("admin","12345",1)
 
     //validar user
     private fun ingresar(txtusuariostring: String, txtpasswordstring: String) {
