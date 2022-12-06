@@ -21,37 +21,16 @@ class AlmacenActivity : AppCompatActivity() {
         var apadtarlista =ArrayAdapter<Producto>(this,android.R.layout.simple_list_item_1,
             dataproductos)
         lvldatos.adapter=apadtarlista
-      //  valornombre.text=dataproductos.toString()
+
         lvldatos.setOnItemClickListener(){parent,view,position,id->
 
-           // Toast.makeText(this, parent.getItemAtPosition(position).toString(),Toast.LENGTH_SHORT).show()
-
             var name = dataproductos[position]
-            //Toast.makeText(this, name.toString(),Toast.LENGTH_SHORT).show()
-
 
             val miIntent = Intent(this, AgreProdActivity::class.java)
             miIntent.putExtra("prod",name)
             startActivity(miIntent)
 
-
-
-
-
-
-
-
-         //  var name =Producto()
-          //  val miIntent = Intent(this, AgreProdActivity::class.java)
-         //   startActivity(miIntent)
-          //  miIntent.putExtra("product",product)
-
-
         }
-
-
-
-
 
     }
 

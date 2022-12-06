@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#03A9F4"
+        android:background="#96EAF4"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,7 +24,7 @@
             android:fontFamily="sans-serif-black"
             android:paddingBottom="10dp"
             android:text="Agregar Empleado"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,8 @@
                     android:text="Nombre"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/valornombre"
@@ -99,7 +100,8 @@
                     android:text="Apellido"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/valorApellido"
@@ -118,15 +120,16 @@
                     android:text="DNI"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/valorDni"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:inputType="number"
-                    android:hint="DNI" />
+                    android:hint="DNI"
+                    android:inputType="number" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -136,7 +139,8 @@
                     android:text="Cargo:"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <Spinner
                     android:id="@+id/spinnercargo"
@@ -153,7 +157,8 @@
                     android:text="Telefono"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <EditText
                     android:id="@+id/editTextTelefono"
@@ -170,7 +175,8 @@
                     android:text="Salario"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <EditText
                     android:id="@+id/editTextSalario"
@@ -189,7 +195,8 @@
                     android:text="Direccion"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/black"
+                    app:fontFamily="sans-serif-black" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"

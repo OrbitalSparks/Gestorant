@@ -31,9 +31,6 @@ class AgreProdActivity : AppCompatActivity() {
             proveedor.setText(produc.Proovedor)
         }
 
-
-      // Toast.makeText(this,spinnerlist.selectedItemPosition.toString(), Toast.LENGTH_SHORT).show()
-
         botonagre.setOnClickListener{
             var productonew=Producto(valornombre.text.toString(),spinnerlist.selectedItem.toString(),valorprecio.text.toString().toDouble(),valorcantidad.text.toString().toInt(),proveedor.text.toString().trim())
             Toast.makeText(this,"Producto Agregado",Toast.LENGTH_SHORT).show()

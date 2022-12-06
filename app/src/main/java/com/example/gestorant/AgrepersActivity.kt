@@ -25,32 +25,15 @@ class AgrepersActivity : AppCompatActivity() {
         var myArray=arrayOf("Chef","Cajero/a","Personal de limpieza","Mozo/a")
         var spinnerlista= ArrayAdapter(this,android.R.layout.simple_spinner_item,myArray)
         spinnercargo.adapter=spinnerlista
+
         botonagregarpersona.setOnClickListener {
             var personanew=Empleados(valornombre.text.toString(),valorapellido.text.toString(),valorDnI.text.toString().toInt(),valortelefono.text.toString().toInt(),valorsalario.text.toString().toDouble(),Direccion(valorcalle.text.toString(),valorcallenumero.text.toString().toInt(),)
             ,spinnercargo.selectedItem.toString())
-
-         //   Dataalmacen.dataPersonas.remove(produc)
             Dataalmacen.dataPersonas.add(personanew)
             Toast.makeText(this,"Persona Agregada", Toast.LENGTH_SHORT).show()
             val miIntent = Intent(this,MainActivity::class.java)
             startActivity(miIntent)
         }
-
-
-      //  lvldatos.setOnItemClickListener(){parent,view,position,id->
-
-            // Toast.makeText(this, parent.getItemAtPosition(position).toString(),Toast.LENGTH_SHORT).show()
-
-         //   var name = Dataalmacen.dataproductos[position]
-            //Toast.makeText(this, name.toString(),Toast.LENGTH_SHORT).show()
-
-            //  var name =Producto()
-            //  val miIntent = Intent(this, AgreProdActivity::class.java)
-            //   startActivity(miIntent)
-            //  miIntent.putExtra("product",product)
-
-
-     //   }
 
 
     }

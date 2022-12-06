@@ -30,12 +30,6 @@ class ListaEmpleActivity2 : AppCompatActivity() {
 
             var name = dataPersonas[position]
 
-          //  val miIntent = Intent(this, AgrepersActivity::class.java)
-          // miIntent.putExtras("prod",name)
-          //   startActivity(miIntent)
-
-
-
 
         }
     }
